@@ -8,9 +8,10 @@ import rootReducer, { rootSaga } from './modules';
 import createSagaMiddleware from 'redux-saga';
 import { Provider } from 'react-redux';
 import { BrowserRouter } from 'react-router-dom';
+import ReduxThunk from 'redux-thunk'; 
 
 const sagaMiddleware = createSagaMiddleware(); 
-const store =createStore( rootReducer, applyMiddleware(sagaMiddleware));
+const store =createStore( rootReducer, applyMiddleware(sagaMiddleware ,ReduxThunk));
 sagaMiddleware.run(rootSaga);
 
 ReactDOM.render(
