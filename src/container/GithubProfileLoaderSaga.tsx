@@ -14,14 +14,16 @@ function GithubProfileLoaderSaga(){
   } ;
 
   return (
-    <h1>SAGA
-      <GithubUsernameForm onSubmitUsername={onSubmitUsername}/>
+    <>
+      <div style={{display:'flex'}}>
+        <h1 style={{marginLeft:'500px' }}>SAGA</h1>
+        <GithubUsernameForm onSubmitUsername={onSubmitUsername}/>
+      </div>
       {loading && <p style={ {textAlign: 'center'}}>로딩중...</p> }
       {data && (<GithubProfileInfo
         name={data.name} thumbnail={data.avatar_url} bio={data.bio} blog={data.blog}/>)}
       {error && <p style={ {textAlign: 'center'}}> 에러발생...</p> }
-
-    </h1>
+    </>  
   )
 }
 export default GithubProfileLoaderSaga;

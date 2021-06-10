@@ -3,8 +3,8 @@
   display: flex;
   align-items: center;
   height: 32px;
-  margin: 0 auto;
-  margin-top: 16px;
+  margin: 0 20px;
+  margin-top: 25px;
   margin-bottom: 48px;
 }
 
@@ -18,7 +18,7 @@
 }
 
 .GithubUsernameForm button{
-  background-color: rgb(50, 94, 161);
+  background-color:#1d3658;
   color: white;
   cursor: pointer;
   outline: none;
