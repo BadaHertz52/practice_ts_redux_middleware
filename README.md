@@ -90,7 +90,7 @@ F extends AnyPromiseCreator
         dispatch(failure(e)) ; 
       }};};}
 ```
-##### b. thunk.ts
+##### b. thunks.ts
 ``` typescript
 export const getUserProfileThunk = createAsyncThunk(getUserProfileAsync ,getUserProfile);
 
@@ -126,7 +126,7 @@ export default function createAsyncSaga
         yield put(aysncActionCreator.failure(e))
       }}}
 ```
-##### b.saga.ts 
+##### b.sagas.ts 
 ```typescript
 const getUserProfileSaga = createAsyncSaga(getUserProfileAsync ,getUserProfile);
 
